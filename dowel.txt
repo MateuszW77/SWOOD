@@ -98,8 +98,8 @@ if AUTO  then
 		C2.P.X=-(ZM1 * 32)
 		C5.P.X=(FIX(ZM1/5) * 32)
 		C6.P.X=-(FIX(ZM1/5) * 32)
-		C3.P.X=((C1.P.X-C5.P.X)/2)+C5.P.X
-		C4.P.X=((C2.P.X-C6.P.X)/2)+C6.P.X
+		C3.P.X=(FIX((((C1.P.X-C5.P.X)/2)+C5.P.X)/32))*32
+		C4.P.X=(FIX((((C2.P.X-C6.P.X)/2)+C6.P.X)/32))*32
 	endif
 else
 	C2.S =false
